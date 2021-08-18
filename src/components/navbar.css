@@ -16,3 +16,22 @@
 .navbar-collapse {
     flex-grow: 0; 
 }
+.navbar-nav {
+    align-items: center;
+}
+.nav-link {
+    font-size: 1.1rem;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(162 162 162);
+}
+.navbar-brand{
+    font-size: 1.6rem;
+}
+#cart {
+    margin-left: 4rem;
+}
+#cart svg {
+    height: 27px;
+    width: 27px;
+}

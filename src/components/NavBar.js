@@ -1,7 +1,6 @@
 import { Navbar, Nav } from 'react-bootstrap';
 import './navbar.css';
-
-
+import CartWidget from './CartWidget';
 
 export default function NavBar() {
 
@@ -16,9 +15,10 @@ export default function NavBar() {
                         navbarScroll
                     >
                         <Nav.Link href="#action1">Home</Nav.Link>
-                        <Nav.Link href="#action2">Link 1</Nav.Link>
-                        <Nav.Link href="#action2">Link 2</Nav.Link>
-                        <Nav.Link href="#action2">Link 3</Nav.Link>
+                        <Nav.Link href="#action2">Categorias</Nav.Link>
+                        <Nav.Link href="#action3">Ofertas</Nav.Link>
+                        <Nav.Link href="#action4">Ingresar</Nav.Link>
+                        <Nav.Link id="cart"><CartWidget/></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 </div>
