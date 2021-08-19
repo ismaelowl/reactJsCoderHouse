@@ -1,0 +1,15 @@
+.rowCount {
+    align-items: center;
+}
+.text-aling-end{
+    text-align: end;
+}
+.text-aling-start{
+    text-align: start;
+}
+.text-aling-center {
+    text-align: center;
+}
+.itemCountContainer{
+    padding: 40px;
+}
