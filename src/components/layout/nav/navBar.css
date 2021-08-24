@@ -1,0 +1,16 @@
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 1000px) { 
+    .list-menu {
+        display: none;
+    }
+    .btn-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+ }

@@ -1,15 +1,16 @@
+import { ChakraProvider } from "@chakra-ui/react"
 import './App.css';
-import ItemCount from './components/ItemCount';
+import ItemCount from './components/itemCount/ItemCount';
 import ItemListContainer from './components/ItemListContainer';
-import NavBar from './components/NavBar';
+import NavBar from './components/layout/nav/NavBar';
 
 function App() {
   return (
-    <>
-      <NavBar></NavBar>
-      <ItemListContainer nombre="Ismael" apellido="Peralta"/>
-      <ItemCount stock="10" initial="3"/>
-    </>
+    <ChakraProvider>
+      <NavBar/>
+      <ItemListContainer nombre="Item List Container"/>
+      <ItemCount stock={10} initial={3}/>
+    </ChakraProvider>
   );
 }
 
