@@ -1,18 +1,23 @@
 import { ChakraProvider } from "@chakra-ui/react"
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
-import ItemCount from './components/itemCount/ItemCount';
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/layout/nav/NavBar';
 
 function App() {
   return (
-    <ChakraProvider>
-      <NavBar/>
-      <ItemListContainer nombre="Item List Container"/>
-      <ItemCount stock={10} initial={3}/>
-      <ItemDetailContainer/>
-    </ChakraProvider>
+    <BrowserRouter>
+      <ChakraProvider>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={ItemListContainer} />
+          <Route path="/category/:id" component={ItemListContainer} />
+          <Route path="/item/:id" component={ItemDetailContainer} />
+        </Switch>
+      </ChakraProvider>
+    </BrowserRouter>
+
   );
 }
 

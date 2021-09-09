@@ -14,7 +14,7 @@ const ItemList = ({ data }) => {
             )
             :
             (
-                <Flex mt="10">
+                <Flex mt="10" flexWrap="wrap">
                     {data.map((e) => (
                         <Item data={e} key={e.id}></Item>
                     ))}

@@ -23,7 +23,7 @@ const ItemCount = ({ stock, initial }) => {
     }
 
     return (
-        <Container maxW="container.xl" mt="5">
+        <Container maxW="container.xl" mt="5" paddingBottom="5">
             <Text textAlign="center">Contador</Text>
             <Flex justifyContent="center" alignItems="center" mt="5">
                 <Box>
