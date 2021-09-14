@@ -1,7 +1,7 @@
-import { Flex, Skeleton } from '@chakra-ui/react';
+import { Flex, Skeleton, Box, Heading } from '@chakra-ui/react';
 import Item from './Item';
 
-const ItemList = ({ data }) => {
+const ItemList = ({ data, nombre }) => {
 
     return (
         data.length === 0 ?
@@ -14,11 +14,14 @@ const ItemList = ({ data }) => {
             )
             :
             (
-                <Flex mt="10" flexWrap="wrap">
-                    {data.map((e) => (
-                        <Item data={e} key={e.id}></Item>
-                    ))}
-                </Flex>
+                <Box>
+                    <Heading size="lg">{nombre}</Heading>
+                    <Flex mt="5" flexWrap="wrap" alignContent="center" justifyContent="space-between">
+                        {data.map((e) => (
+                            <Item data={e} key={e.id}></Item>
+                        ))}
+                    </Flex>
+                </Box>
             )
     )
 }

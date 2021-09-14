@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Container, Heading } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 import ItemList from './ItemList'
 import { useParams } from 'react-router';
 
@@ -41,9 +41,8 @@ const ItemListContainer = () => {
     }, [id]);
 
     return (
-        <Container maxW="container.xl" mt="10" >
-            <Heading size="lg">Nuevos Productos</Heading>
-            <ItemList data={data} />
+        <Container maxW="container.xl" mt="10">
+            <ItemList data={data} nombre="Nuevos Productos" />
         </Container>
     )
 }
