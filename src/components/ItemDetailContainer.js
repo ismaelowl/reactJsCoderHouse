@@ -13,14 +13,14 @@ const ItemDetailContainer = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() =>
                 resolve([
-                    { id: '1', title: 'Producto 1', price: 1202, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 5, imageUrl: "https://bit.ly/2Z4KKcF" },
-                    { id: '2', title: 'Producto 2', price: 220, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 4, imageUrl: "https://bit.ly/2Z4KKcF" },
-                    { id: '3', title: 'Producto 3', price: 603, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 2, imageUrl: "https://bit.ly/2Z4KKcF" },
-                    { id: '4', title: 'Producto 4', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF" },
-                    { id: '5', title: 'Producto 5', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF" },
-                    { id: '6', title: 'Producto 6', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF" },
-                    { id: '7', title: 'Producto 7', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF" },
-                    { id: '8', title: 'Producto 8', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF" }
+                    { id: '1', title: 'Producto 1', price: 1202, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 5, imageUrl: "https://bit.ly/2Z4KKcF", stock: 7 },
+                    { id: '2', title: 'Producto 2', price: 220, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 4, imageUrl: "https://bit.ly/2Z4KKcF", stock: 14 },
+                    { id: '3', title: 'Producto 3', price: 603, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 2, imageUrl: "https://bit.ly/2Z4KKcF", stock: 34 },
+                    { id: '4', title: 'Producto 4', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF", stock: 6 },
+                    { id: '5', title: 'Producto 5', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF", stock: 23 },
+                    { id: '6', title: 'Producto 6', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF", stock: 15 },
+                    { id: '7', title: 'Producto 7', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF", stock: 10 },
+                    { id: '8', title: 'Producto 8', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF", stock: 3 }
                 ]), 1000
             )
         })

@@ -1,19 +1,19 @@
 import { Container, Heading, Text, Box, Image, Button, Center, Flex } from '@chakra-ui/react';
 import ItemCount from './itemCount/ItemCount';
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
+import { contexto } from './CartContext';
 
 const ItemDetail = ({ data }) => {
 
-    const [itemCart, setItemCart] = useState(0);
+    const [cantidadItem, setCantidadItem] = useState(0);
 
-    const onAdd = (product) => {
-        if (itemCart === 0) {
-            setItemCart(product)
-        } else {
-            const itemsCart = itemCart + product
-            setItemCart(itemsCart)
-        }
+    const { addProduct } = useContext(contexto)
+
+    const onAdd = (cantidad) => {
+        const productContext = { ...data, cantidad }
+        setCantidadItem(cantidad)
+        addProduct(productContext, cantidad)
     }
 
     return (
@@ -25,12 +25,10 @@ const ItemDetail = ({ data }) => {
                 <Text mt="1">$ {data.price} ARS</Text>
             </Box>
             <Box boxSize="md" mt="10">
-                <ItemCount stock={10} initial={1} onAdd={onAdd} />
-
                 {
-                    itemCart === 0 ?
+                    cantidadItem === 0 ?
                         (
-                            <Box />
+                            <ItemCount stock={data.stock} initial={1} onAdd={onAdd} />
                         )
                         :
                         (
@@ -45,6 +43,7 @@ const ItemDetail = ({ data }) => {
                             </Container>
                         )
                 }
+
             </Box>
         </Flex>
     )
