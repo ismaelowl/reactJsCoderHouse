@@ -1,5 +1,5 @@
 import { Container, Heading, Box, Flex, Button, IconButton, useColorMode, useColorModeValue, Menu, MenuButton, MenuList, MenuGroup, MenuItem, MenuDivider } from '@chakra-ui/react';
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import CartWidget from '../CartWidget';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
@@ -38,7 +38,7 @@ const NavBar = () => {
                 </Box>
                 <Box w="100%" h="100%" className="btn-menu">
                     <Flex h="100%" alignItems="center" justifyContent="flex-end">
-                        <Button marginRight="5"><CartWidget></CartWidget></Button>
+                        <Link to="/cart"><Button marginRight="5"><CartWidget></CartWidget></Button></Link>
                         <Button onClick={toggleColorMode}>
                             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                         </Button>
@@ -47,7 +47,7 @@ const NavBar = () => {
 
                 <Box w="100%" h="100%" className="mobile-menu">
                     <Flex h="100%" alignItems="center" justifyContent="space-evenly">
-                        <Button><CartWidget></CartWidget></Button>
+                    <Link to="/cart"><Button><CartWidget></CartWidget></Button></Link>
                         <Menu>
                             <MenuButton
                                 as={IconButton}

@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
                     { id: '6', title: 'Producto 6', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF", stock: 15 },
                     { id: '7', title: 'Producto 7', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF", stock: 10 },
                     { id: '8', title: 'Producto 8', price: 2360, detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,", rating: 1, imageUrl: "https://bit.ly/2Z4KKcF", stock: 3 }
-                ]), 1000
+                ]), 0
             )
         })
     }

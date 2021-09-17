@@ -2,7 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react"
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 import Cart from "./components/Cart";
-import CartContext from "./components/CartContext";
+import CartContext from "./context/CartContext";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/layout/nav/NavBar';

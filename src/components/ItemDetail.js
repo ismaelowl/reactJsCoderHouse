@@ -2,7 +2,7 @@ import { Container, Heading, Text, Box, Image, Button, Center, Flex } from '@cha
 import ItemCount from './itemCount/ItemCount';
 import { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
-import { contexto } from './CartContext';
+import { contexto } from '../context/CartContext';
 
 const ItemDetail = ({ data }) => {
 
