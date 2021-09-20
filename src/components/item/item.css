@@ -1,0 +1,9 @@
+.box-item {
+    max-width: 380px;
+}
+
+@media (max-width: 1240px) { 
+    .box-item {
+        max-width: 300px;
+    }
+ }

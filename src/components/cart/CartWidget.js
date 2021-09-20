@@ -15,7 +15,6 @@ const CartWidget = () => {
 
     }, [carrito]);
 
-    console.log(productCart);
     return (
         <Box>
             {

@@ -1,9 +1,10 @@
 import { Container, Box, Image, Flex, Text, Button } from "@chakra-ui/react"
 import { useContext, useState, useEffect } from "react";
-import { contexto } from '../context/CartContext';
+import { contexto } from '../../context/CartContext';
 import { Heading } from '@chakra-ui/react';
 import { CloseIcon } from '@chakra-ui/icons'
 import { Link } from "react-router-dom"
+import './cart.css'
 
 const Cart = () => {
 
@@ -18,11 +19,11 @@ const Cart = () => {
     }, [carrito, carritoCart]);
 
     carritoCart.forEach(element => {
-        total += element.price * element.cantidad
+        total += element.precio * element.cantidad
     });
 
     return (
-        <Container maxW="container.xl" mt="10">
+        <Container maxW="container.xl" mt="10" minH="70vh">
             <Heading size="lg">Detalles del Carrito</Heading>
             {
                 carritoCart.length === 0 ?
@@ -38,24 +39,25 @@ const Cart = () => {
                     )
                     :
                     (
-                        <Box mt="10">
+                        <Box mt="10" w="100%">
                             {carrito.map((e) => (
-                                <Box key={e.id} mt="5">
-                                    <Flex alignItems="center" gridGap="20">
+                                <Box key={e.id} mt="5" w="100%">
+                                    <Box className="box-cart">  
                                         <Image
                                             boxSize="150px"
                                             objectFit="cover"
                                             src={e.imageUrl}
+                                            borderRadius="lg"
                                         />
                                         <Box>
-                                            <Text fontSize="xl">Producto: {e.title}</Text>
+                                            <Text fontSize="xl">Producto: {e.nombreProducto}</Text>
                                             <Text fontSize="xl">Cantidad: {e.cantidad}</Text>
                                         </Box>
                                         <Box>
-                                            <Text fontSize="xl">Precio: ${e.price}</Text>
+                                            <Text fontSize="xl">Precio: ${e.precio}</Text>
                                         </Box>
                                         <Button onClick={removeProduct}><CloseIcon w={4} h={4} color="red.500" /></Button>
-                                    </Flex>
+                                        </Box>
                                 </Box>
                             ))}
                             <Text fontSize="xl" mt="10">Precio Total: ${total}</Text>

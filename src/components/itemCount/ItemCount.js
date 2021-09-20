@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Flex, Box, Button, Text, Center } from '@chakra-ui/react';
+import { Flex, Box, Button, Text } from '@chakra-ui/react';
 import { FiShoppingCart } from 'react-icons/fi'
 import './itemCount.css';
 
@@ -28,9 +28,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
 
     return (
-        <Container maxW="container.xl" mt="5" paddingBottom="5">
-            <Text textAlign="center">Agregar al Carrito</Text>
-            <Flex justifyContent="center" alignItems="center" mt="5">
+        <Box mt="5">
+            <Text>Agregar al Carrito</Text>
+            <Flex alignItems="center" mt="5">
                 <Box>
                     <Button colorScheme="teal" variant="outline" onClick={restarContador}>
                         -
@@ -45,12 +45,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                     </Button>
                 </Box>
             </Flex>
-            <Center>
-                <Button onClick={handlerOnAdd} leftIcon={<FiShoppingCart />} colorScheme="teal" variant="solid" mt="5">
-                    Agregar
-                </Button>
-            </Center>
-        </Container>
+            <Button onClick={handlerOnAdd} leftIcon={<FiShoppingCart />} colorScheme="teal" variant="solid" mt="5">
+                Agregar
+            </Button>
+        </Box>
     )
 }
 

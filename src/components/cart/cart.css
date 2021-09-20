@@ -1,0 +1,13 @@
+/* // alignItems="center" gridGap="20" justifyContent="space-between"> */
+.box-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) { 
+    .box-cart {
+        display: block;
+        gap: 50px;
+    }
+ }

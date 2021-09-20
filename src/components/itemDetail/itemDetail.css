@@ -1,0 +1,23 @@
+.box-detail {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+}
+.image-box {
+    width: 100%;
+}
+
+.detail-box {
+    width: 100%;
+    margin-left: 40px;
+}
+
+@media (max-width: 1000px) { 
+    .box-detail {
+        display: block;
+    }
+    .detail-box {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+ }

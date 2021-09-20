@@ -1,14 +1,14 @@
 import { Box, Image, Badge } from '@chakra-ui/react';
 import { StarIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom';
+import './item.css'
 
 const Item = ({ data }) => {
 
     return (
         <Link to={`/item/${data.id}`}>
-            <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" mr="4" mt="5">
+            <Box className="box-item" borderWidth="1px" boxShadow="sm" borderRadius="lg" overflow="hidden" marginLeft="2" marginRight="2" mt="5">
                 <Image src={data.imageUrl} />
-
                 <Box p="6">
                     <Box d="flex" alignItems="baseline">
                         <Badge borderRadius="full" px="2" colorScheme="teal">
@@ -25,7 +25,6 @@ const Item = ({ data }) => {
                             Categoria
                         </Box>
                     </Box>
-
                     <Box
                         mt="1"
                         fontWeight="semibold"
@@ -33,16 +32,14 @@ const Item = ({ data }) => {
                         lineHeight="tight"
                         isTruncated
                     >
-                        {data.title}
+                        {data.nombreProducto}
                     </Box>
-
                     <Box>
-                        $ {data.price}
+                        $ {data.precio}
                         <Box as="span" color="gray.600" fontSize="sm" ml="1.5">
                             ARS
                         </Box>
                     </Box>
-
                     <Box d="flex" mt="2" alignItems="center">
                         {Array(5)
                             .fill("")
