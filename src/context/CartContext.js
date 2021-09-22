@@ -10,7 +10,7 @@ const CartContext = ({ children }) => {
     const addProduct = (producto, cantidad) => {
 
         const productoID = producto.id
-
+        
         if (isInCart(productoID)) {
             const productoCarrito = carrito.find(producto => producto.id === productoID)
             productoCarrito.cantidad = productoCarrito.cantidad + cantidad
