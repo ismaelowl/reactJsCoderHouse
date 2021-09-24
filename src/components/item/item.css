@@ -1,5 +1,25 @@
 .box-item {
     max-width: 380px;
+    transition: 10ms;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.box-item:hover {
+    transition: 10ms;
+    -moz-transform: scale(1.005);
+    -webkit-transform: scale(1.005);
+    -o-transform: scale(1.005);
+    -ms-transform: scale(1.005);
+    transform: scale(1.005);
+}
+
+.price {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.badge-background {
+    background: aqua;
 }
 
 @media (max-width: 1240px) { 

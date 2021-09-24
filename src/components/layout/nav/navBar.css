@@ -1,6 +1,9 @@
 .mobile-menu {
     display: none;
 }
+.hover_box:hover {
+    color: #bebebe;
+}
 
 @media (max-width: 1000px) { 
     .list-menu {

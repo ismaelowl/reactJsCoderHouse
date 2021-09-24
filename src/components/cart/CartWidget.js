@@ -16,11 +16,11 @@ const CartWidget = () => {
     }, [carrito]);
 
     return (
-        <Box>
+        <Box padding="4">
             {
                 productCart === 0 ?
                     (
-                        <FiShoppingCart size={18}></FiShoppingCart>
+                        <FiShoppingCart size={24}></FiShoppingCart>
                     )
                     :
                     (
@@ -30,7 +30,7 @@ const CartWidget = () => {
                                     {productCart}
                                 </Text>
                             </Box>
-                            <FiShoppingCart size={18}></FiShoppingCart>
+                            <FiShoppingCart size={24}></FiShoppingCart>
                         </Box>
                     )
             }
