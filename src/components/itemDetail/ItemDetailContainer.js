@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
 
     return (
         <Container maxW="container.xl" mt="10" minH="80vh">
-            <Heading size="lg">Detalles del Producto</Heading>
+            <Heading size="lg">Detalles - {data.nombreProducto}</Heading>
             <ItemDetail data={data} />
         </Container>
     )

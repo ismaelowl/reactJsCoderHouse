@@ -25,8 +25,14 @@ const CartWidget = () => {
                     :
                     (
                         <Box position="relative">
-                            <Box position="absolute" top="15" left="20px" borderRadius="50%" padding="3px 7px 3px 7px" background="green.500">
-                                <Text fontSize="13px">
+                            <Box
+                                position="absolute"
+                                top="15"
+                                left="20px"
+                                borderRadius="50%"
+                                padding="1px 8px 2px 8px"
+                                backgroundImage='linear-gradient(to left, #7928caa6, #ff0080b8)'>
+                                <Text fontSize="13px" color="white" fontWeight="bold">
                                     {productCart}
                                 </Text>
                             </Box>

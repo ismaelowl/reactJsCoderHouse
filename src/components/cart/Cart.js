@@ -1,9 +1,10 @@
-import { Container, Box, Image, Flex, Text, Button } from "@chakra-ui/react"
+import { Container, Box, Image, Flex, Text, Button, useColorModeValue } from "@chakra-ui/react"
 import { useContext, useState, useEffect } from "react";
 import { contexto } from '../../context/CartContext';
 import { Heading } from '@chakra-ui/react';
 import { CloseIcon } from '@chakra-ui/icons'
 import { Link } from "react-router-dom"
+import { FaEthereum } from 'react-icons/fa';
 import './cart.css'
 
 const Cart = () => {
@@ -11,6 +12,8 @@ const Cart = () => {
     const [carritoCart, setcarritoCart] = useState([]);
 
     const { carrito, clear, removeProduct } = useContext(contexto)
+
+    const bgBorder = useColorModeValue('#46154a36', '#7b4d805e')
 
     let total = 0
 
@@ -29,9 +32,16 @@ const Cart = () => {
                 carritoCart.length === 0 ?
                     (
                         <Box>
-                            <Text fontSize="2xl" mt="10">No hay productos en el carrito</Text>
-                            <Link  to="/">
-                                <Button colorScheme="green" variant="outline" mt="10">
+                            <Text
+                                fontSize="2xl"
+                                mt="10">
+                                No hay NFTs en el carrito
+                            </Text>
+                            <Link to="/">
+                                <Button
+                                    colorScheme="purple"
+                                    variant="outline"
+                                    mt="10">
                                     Volver
                                 </Button>
                             </Link>
@@ -41,8 +51,16 @@ const Cart = () => {
                     (
                         <Box mt="10" w="100%">
                             {carrito.map((e) => (
-                                <Box key={e.id} mt="5" w="100%">
-                                    <Box className="box-cart">  
+                                <Box
+                                    key={e.id}
+                                    mt="5"
+                                    w="100%"
+                                    p="6"
+                                    borderRadius="lg"
+                                    borderWidth="2px"
+                                    borderColor={bgBorder}
+                                    position="relative">
+                                    <Box className="box-cart">
                                         <Image
                                             boxSize="150px"
                                             objectFit="cover"
@@ -50,30 +68,51 @@ const Cart = () => {
                                             borderRadius="lg"
                                         />
                                         <Box>
-                                            <Text fontSize="xl">Producto: {e.nombreProducto}</Text>
-                                            <Text fontSize="xl">Cantidad: {e.cantidad}</Text>
+                                            <Text fontSize="xl"><span className="font-bold">NFT:</span> {e.nombreProducto}</Text>
+                                            <Text fontSize="xl"><span className="font-bold">Cantidad:</span> {e.cantidad}</Text>
                                         </Box>
                                         <Box>
-                                            <Text fontSize="xl">Precio: ${e.precio}</Text>
+                                            <Text fontSize="xl"><span className="font-bold">ETH:</span> ${e.precio}</Text>
                                         </Box>
-                                        <Button onClick={removeProduct}><CloseIcon w={4} h={4} color="red.500" /></Button>
-                                        </Box>
+                                        <Button onClick={removeProduct}>
+                                            <CloseIcon w={4} h={4} color="red.500" />
+                                            <Text ml="2">Eliminar</Text>
+                                        </Button>
+                                    </Box>
                                 </Box>
                             ))}
-                            <Text fontSize="xl" mt="10">Precio Total: ${total}</Text>
-                            <Flex>
-                                <Button colorScheme="green" variant="outline" mt="10" mr="5">
+                            <Box
+                                fontSize="1.5em"
+                                mt="10"
+                                display="flex"
+                                gridGap="2"
+                                alignItems="center">
+                                <span className="font-bold">Total: </span>
+                                <FaEthereum
+                                    size={24}
+                                    color="#035d91" />
+                                {total} ETH
+                            </Box>
+                            <Flex alignItems="center" mt="10">
+                                <Button
+                                    fontSize="1.5em"
+                                    padding="6"
+                                    colorScheme="purple"
+                                    variant="outline"
+                                    mr="5">
                                     Finalizar Compra
                                 </Button>
-                                <Button colorScheme="pink" variant="outline" mt="10" onClick={clear}>
+                                <Button
+                                    fontSize=".9em"
+                                    colorScheme="pink"
+                                    variant="outline"
+                                    onClick={clear}>
                                     Limpiar Carrito
                                 </Button>
                             </Flex>
                         </Box>
-
                     )
             }
-
         </Container>
     )
 }

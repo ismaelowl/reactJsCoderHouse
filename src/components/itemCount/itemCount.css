@@ -13,3 +13,13 @@
 .itemCountContainer{
     padding: 40px;
 }
+
+.shadow-button:hover {
+    box-shadow: 0 0 1rem 0 rgb(248 77 169 / 42%);
+    transition: 10ms;
+    -moz-transform: scale(1.005);
+    -webkit-transform: scale(1.005);
+    -o-transform: scale(1.005);
+    -ms-transform: scale(1.005);
+    transform: scale(1.005);
+}
