@@ -10,10 +10,9 @@ const ItemDetailContainer = () => {
 
     const { id } = useParams()
  
-    const db = firestore
-    const collection = db.collection('productos').doc(`${id}`)
-
     useEffect(() => {
+        const db = firestore
+        const collection = db.collection('productos').doc(`${id}`)
         const promise = collection.get()
         promise
             .then((doc) => {

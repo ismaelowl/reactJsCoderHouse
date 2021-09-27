@@ -4,7 +4,7 @@ import './App.css';
 import Cart from "./components/cart/Cart";
 import CartContext from "./context/CartContext";
 import ItemDetailContainer from "./components/itemDetail/ItemDetailContainer";
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/itemList/ItemListContainer';
 import NavBar from './components/layout/nav/NavBar';
 import Footer from "./components/layout/footer/Footer";
 

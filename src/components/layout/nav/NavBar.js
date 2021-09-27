@@ -13,17 +13,30 @@ const NavBar = () => {
 
 
     return (
-        <Container maxW="container.xl" className="slideInDown">
-            <Flex h="80px" gap={6}>
-
-                <Box w="100%" h="100%" display="flex" alignItems="center">
+        <Container
+            maxW="container.xl"
+            className="slideInDown">
+            <Flex
+                h="80px"
+                gap={6}>
+                <Box
+                    w="100%"
+                    h="100%"
+                    display="flex"
+                    alignItems="center">
                     <Link to="/">
-                    {colorMode === "light" ? <Img src={logoDark} width="140px"/> : <Img src={logoWhite} width="140px"/>}
+                        {colorMode === "light" ? <Img src={logoDark} width="140px" /> : <Img src={logoWhite} width="140px" />}
                     </Link>
                 </Box>
 
-                <Box w="100%" h="100%" className="list-menu">
-                    <Flex h="100%" alignItems="center" justifyContent="space-around">
+                <Box
+                    w="100%"
+                    h="100%"
+                    className="list-menu">
+                    <Flex
+                        h="100%"
+                        alignItems="center"
+                        justifyContent="space-around">
                         <Box>
                             <Link to="/"><Text fontWeight="bold">Home</Text></Link>
                         </Box>
@@ -38,18 +51,38 @@ const NavBar = () => {
                         </Box>
                     </Flex>
                 </Box>
-                <Box w="100%" h="100%" className="btn-menu">
-                    <Flex h="100%" alignItems="center" justifyContent="flex-end">
+                <Box
+                    w="100%"
+                    h="100%"
+                    className="btn-menu">
+                    <Flex
+                        h="100%"
+                        alignItems="center"
+                        justifyContent="flex-end">
                         <Link to="/cart"><CartWidget></CartWidget></Link>
-                        <Box width="56px" height="56px" display="flex" justifyContent="center" alignItems="center" onClick={toggleColorMode} cursor="pointer" className="hover_box">
-                            {colorMode === "light" ? <FiMoon size={24}/> : <FiSun size={24}/>}
+                        <Box
+                            width="56px"
+                            height="56px"
+                            display="flex"
+                            justifyContent="center"
+                            alignItems="center"
+                            onClick={toggleColorMode}
+                            cursor="pointer"
+                            className="hover_box">
+                            {colorMode === "light" ? <FiMoon size={24} /> : <FiSun size={24} />}
                         </Box>
                     </Flex>
                 </Box>
 
-                <Box w="100%" h="100%" className="mobile-menu">
-                    <Flex h="100%" alignItems="center" justifyContent="flex-end">
-                    <Link to="/cart"><CartWidget></CartWidget></Link>
+                <Box
+                    w="100%"
+                    h="100%"
+                    className="mobile-menu">
+                    <Flex
+                        h="100%"
+                        alignItems="center"
+                        justifyContent="flex-end">
+                        <Link to="/cart"><CartWidget></CartWidget></Link>
                         <Menu>
                             <MenuButton
                                 as={IconButton}
