@@ -7,6 +7,7 @@ import ItemDetailContainer from "./components/itemDetail/ItemDetailContainer";
 import ItemListContainer from './components/itemList/ItemListContainer';
 import NavBar from './components/layout/nav/NavBar';
 import Footer from "./components/layout/footer/Footer";
+import FormularioContainer from './components/form/FormularioContainer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/category/:id" component={ItemListContainer} />
             <Route path="/item/:id" component={ItemDetailContainer} />
             <Route path="/cart" component={Cart} />
+            <Route path="/payment" component={FormularioContainer} />
           </Switch>
           <Footer/>
         </CartContext>

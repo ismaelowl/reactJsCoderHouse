@@ -1,0 +1,28 @@
+.formulario-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.ethe {
+    margin: auto;
+}
+.form{
+    width: 50%;
+}
+.ethe-container {
+    width: 50%;
+}
+
+@media (max-width: 1000px) { 
+    .formulario-container {
+        display: block;
+    }
+    .ethe-container {
+        margin-top: 60px;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    .form{
+        width: 100%;
+    }
+ }

@@ -27,7 +27,25 @@ const Cart = () => {
 
     return (
         <Container maxW="container.xl" mt="10" minH="70vh">
-            <Heading size="lg">Detalles del Carrito</Heading>
+            <Flex justifyContent="space-between">
+                <Heading size="lg">Detalles del Carrito</Heading>
+                {
+                    carrito.length === 0 ? 
+                    (
+                        <Box/>
+                    )
+                    :
+                    (  
+                        <Button
+                        fontSize=".8em"
+                        colorScheme="pink"
+                        variant="outline"
+                        onClick={clear}>
+                        Eliminar Todo
+                    </Button>
+                    )
+                }
+            </Flex>
             {
                 carritoCart.length === 0 ?
                     (
@@ -59,7 +77,8 @@ const Cart = () => {
                                     borderRadius="lg"
                                     borderWidth="2px"
                                     borderColor={bgBorder}
-                                    position="relative">
+                                    position="relative"
+                                    className="fadeIn">
                                     <Box className="box-cart">
                                         <Image
                                             boxSize="150px"
@@ -76,7 +95,6 @@ const Cart = () => {
                                         </Box>
                                         <Button onClick={removeProduct}>
                                             <CloseIcon w={4} h={4} color="red.500" />
-                                            <Text ml="2">Eliminar</Text>
                                         </Button>
                                     </Box>
                                 </Box>
@@ -94,21 +112,15 @@ const Cart = () => {
                                 {total} ETH
                             </Box>
                             <Flex alignItems="center" mt="10">
-                                <Button
-                                    fontSize="1.5em"
-                                    padding="6"
-                                    colorScheme="purple"
-                                    variant="outline"
-                                    mr="5">
-                                    Finalizar Compra
-                                </Button>
-                                <Button
-                                    fontSize=".9em"
-                                    colorScheme="pink"
-                                    variant="outline"
-                                    onClick={clear}>
-                                    Limpiar Carrito
-                                </Button>
+                                <Link to="/payment">
+                                    <Button
+                                        fontSize="1.6em"
+                                        padding="6"
+                                        colorScheme="purple"
+                                        variant="solid">
+                                        Verificar
+                                    </Button>
+                                </Link>
                             </Flex>
                         </Box>
                     )

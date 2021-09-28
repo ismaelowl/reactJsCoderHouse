@@ -9,7 +9,7 @@ import imgBannerMobile2 from '../../../assets/banner_img_mobile_two.png'
 
 const Slider = () => {
     return (
-        <Box>
+        <Box className="fadeIn">
             <Carousel className="slider-desktop" showThumbs={false} emulateTouch={true} showStatus={false} autoPlay={true} interval={5000} infiniteLoop={true} showArrows={false}>
                 <Box position="relative" zIndex="banner">
                     <Image src={imgBanner}/>

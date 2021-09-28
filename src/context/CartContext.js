@@ -42,6 +42,7 @@ const CartContext = ({ children }) => {
     }
 
     const contexto = {
+        setCarrito,
         carrito,
         addProduct,
         removeProduct,
