@@ -8,13 +8,15 @@ import ItemListContainer from './components/itemList/ItemListContainer';
 import NavBar from './components/layout/nav/NavBar';
 import Footer from "./components/layout/footer/Footer";
 import FormularioContainer from './components/form/FormularioContainer';
+import ScrollToTop from "./hooks/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <ChakraProvider>
+        <ScrollToTop/>
         <CartContext>
-          <NavBar />
+          <NavBar/>
           <Switch>
             <Route exact path="/" component={ItemListContainer} />
             <Route path="/category/:id" component={ItemListContainer} />
