@@ -1,0 +1,8 @@
+.item-container {
+    justify-content: space-between;
+}
+@media (max-width: 600px) { 
+    .item-container {
+        justify-content: center;
+    }
+ }
