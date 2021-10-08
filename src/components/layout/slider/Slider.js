@@ -28,6 +28,7 @@ const Slider = () => {
                 </Box>
                 <Box>
                     <Image src={imgBannerMobile} />
+                    <Heading fontSize="45px" lineHeight="1" className="slider-title">2025  MARKET<span className="slider-gradient"> ITEM </span></Heading>
                 </Box>
             </Carousel>
         </Box>
